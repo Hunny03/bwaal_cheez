@@ -370,8 +370,8 @@ footer {
   color: #555;
 }
 
-/*contact*/
-.contact-section {
+/*booking*/
+.booking-section {
   max-width: 600px;
   margin: 60px auto 100px;
   background-color: #f2ecc4;
@@ -380,7 +380,7 @@ footer {
   box-shadow: 0 4px 15px rgba(46, 92, 66, 0.2);
 }
 
-.contact-section h2 {
+.booking-section h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
   color: #2e5c42;
@@ -388,7 +388,7 @@ footer {
   text-align: center;
 }
 
-.contact-section label {
+.booking-section label {
   display: block;
   margin-bottom: 8px;
   font-weight: 700;
@@ -396,8 +396,8 @@ footer {
   font-size: 1rem;
 }
 
-.contact-section input,
-.contact-section textarea {
+.booking-section input,
+.booking-section textarea {
   width: 100%;
   padding: 12px 15px;
   margin-bottom: 25px;
@@ -411,13 +411,13 @@ footer {
   resize: vertical;
 }
 
-.contact-section input:focus,
-.contact-section textarea:focus {
+.booking-section input:focus,
+.booking-section textarea:focus {
   outline: none;
   box-shadow: 0 0 8px #2e5c42;
 }
 
-.contact-section button.btn {
+.booking-section button.btn {
   width: 100%;
   padding: 15px 0;
   font-size: 1.2rem;
@@ -430,7 +430,7 @@ footer {
   transition: background-color 0.3s ease;
 }
 
-.contact-section button.btn:hover {
+.booking-section button.btn:hover {
   background-color: #244838;
 }
 

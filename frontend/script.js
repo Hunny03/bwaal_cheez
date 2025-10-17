@@ -44,7 +44,7 @@ function showDetails(destination) {
     }
 }
 
-// Contact form validation & submission simulation
+// booking form validation & submission simulation
 function validateForm(e) {
     e.preventDefault();
     const name = document.getElementById("name").value.trim();
@@ -68,6 +68,6 @@ function validateForm(e) {
 
     formMessage.style.color = "#d4af37";
     formMessage.textContent = `Thank you, ${name}! Your message has been sent.`;
-    document.getElementById("contactForm").reset();
+    document.getElementById("bookingForm").reset();
     return false; // Prevent actual form submission
 }

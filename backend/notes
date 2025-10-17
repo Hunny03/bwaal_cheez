@@ -1,0 +1,19 @@
+CREATE DATABASE himachal_tourism;
+
+USE himachal_tourism;
+
+CREATE TABLE bookings (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  full_name VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  phone VARCHAR(20) NOT NULL,
+  destination VARCHAR(100) NOT NULL,
+  check_in DATE NOT NULL,
+  check_out DATE NOT NULL,
+  guests INT NOT NULL,
+  special_requests TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+Paste this query in php my admin 

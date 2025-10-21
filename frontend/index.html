@@ -6,20 +6,39 @@
   <title>Himachal Pradesh Tourism</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
+  
+
+
 </head>
 <body>
-  <header>
-    <div class="navbar">
-      <div class="logo">Himachal Pradesh</div>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="destinations.html">Destinations</a></li>
-          <li><a href="../backend/booking.php">Bookings</a></li>
-        </ul>
-      </nav>
+<header>
+  <div class="navbar">
+    <div class="logo">
+      <!-- Yahan tum apna image/logo add kar sakte ho -->
+      <img src="images/logo.png" alt="Logo" height="50" style="vertical-align:middle;">
+      Himachal Pradesh Tourism
     </div>
-  </header>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="../backend/booking.php">Bookings</a></li>
+        
+        <li>
+          <a href="profile.html" title="Profile">
+            <img src="images/profile.png" alt="Profile" height="35" style="vertical-align:middle;">
+          </a>
+        </li>
+        
+        </div>
+      </ul>
+    </nav>
+  </div>
+</header>
+
 
   <section class="hero">
     <div class="overlay"></div>
@@ -31,7 +50,9 @@
   </section>
 
   <main>
-    <section class="intro">
+    <section class="intro" id="about">
+      <br>
+      <br>
       <h2>Welcome to Himachal Pradesh</h2>
       <p>
         Nestled in the Himalayas, Himachal Pradesh offers breathtaking landscapes, vibrant culture, and endless adventure.
@@ -56,7 +77,8 @@
         <p>Vibrant festivals, ancient temples, and local traditions.</p>
       </div>
     </section>
-
+<br>
+<br>
     <section class="travel-tips section-center">
       <h2>Things To Know Before Traveling</h2>
       <div class="tips-grid">
@@ -97,6 +119,35 @@
       <h2>Start Your Adventure Today!</h2>
       <a href="../backend/booking.php" class="btn btn-secondary">Get In Touch</a>
     </section>
+
+    
+    <section class="faq-section section-center">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">What is the best time to visit Himachal Pradesh?</button>
+    <div class="faq-answer">
+      <p>The best time is from March to June and September to November when the weather is pleasant.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Do I need any permits for trekking?</button>
+    <div class="faq-answer">
+      <p>Yes, certain trekking areas require permits. It's recommended to check with local authorities or guides.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Is it safe to travel during winters?</button>
+    <div class="faq-answer">
+      <p>Yes, but be prepared for heavy snowfall in some areas and potential road closures.</p>
+    </div>
+  </div>
+  
+</section>
+
+
   </main>
 
   <footer>

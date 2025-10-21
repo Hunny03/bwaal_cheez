@@ -16,22 +16,46 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
+  align-items: center; 
+  padding: 0px 0px;          
   background-color: #2e5c42;
   color: #f2ece1;
+
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.8rem; 
 }
+.logo img {
+  height: 85px;       
+  width: auto;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+nav ul li:not(:last-child) a:hover,
+nav ul li:not(:last-child) a.active {
+  background-color: #f2ecc4;
+  color: #2e5c42;
+}
+
+nav ul li:last-child a:hover,
+nav ul li:last-child a:active
+ {
+  background: none ;
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(46, 92, 66, 0.28);
+}
+
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 25px;
 }
 
 nav ul li a {
@@ -439,3 +463,69 @@ footer {
   font-size: 1.1rem;
   text-align: center;
 }
+
+.faq-section {
+  max-width: 700px;
+  margin: 60px auto;
+}
+
+.faq-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #2e5c42;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.3rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid #d4cca8;
+  margin-bottom: 15px;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2e5c42;
+  text-align: left;
+  padding: 15px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #f2ecc4;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 15px;
+  color: #555;
+}
+
+.faq-answer p {
+  margin: 15px 0;
+}
+
+.faq-question.active::after {
+  content: "-";
+  position: absolute;
+  right: 20px;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.faq-question::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+

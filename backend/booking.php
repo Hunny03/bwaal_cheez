@@ -135,8 +135,6 @@ label {
         <textarea name="special_requests" placeholder="Special Requests (Optional)"></textarea>
         <button type="submit" class="btn-submit">Submit Booking</button>
     </form>
-
-    <!-- Login Section -->
     <div class="login-section">
         Already booked? <a href="login.php">Login here to view or edit your booking</a>
     </div>

@@ -1,3 +1,39 @@
+<?php
+// Start session
+session_start();
+include 'db.php'; // <-- make sure this file connects to your MySQL database
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $full_name = $_POST['full_name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $destination = $_POST['destination'];
+    $check_in = $_POST['check_in'];
+    $check_out = $_POST['check_out'];
+    $guests = $_POST['guests'];
+    $special_requests = $_POST['special_requests'];
+
+    // Check if email already exists
+    $check = $conn->prepare("SELECT * FROM bookings WHERE email = ?");
+    $check->bind_param("s", $email);
+    $check->execute();
+    $result = $check->get_result();
+
+    if ($result->num_rows > 0) {
+        echo "<script>alert('This email is already registered! Please use another email.'); window.location.href='booking.php';</script>";
+    } else {
+        // Insert new booking
+        $insert = $conn->prepare("INSERT INTO bookings (full_name, email, phone, destination, check_in, check_out, guests, special_requests) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $insert->bind_param("ssssssis", $full_name, $email, $phone, $destination, $check_in, $check_out, $guests, $special_requests);
+
+        if ($insert->execute()) {
+            echo "<script>alert('Booking successful!'); window.location.href='login.php';</script>";
+        } else {
+            echo "<script>alert('Error while booking. Please try again.');</script>";
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -108,7 +144,7 @@ label {
 <body>
 <div class="booking-container">
     <h2>Book Your Trip</h2>
-    <form action="submit_booking.php" method="POST">
+    <form action="booking.php" method="POST">
         <input type="text" name="full_name" placeholder="Full Name" required>
         <input type="email" name="email" placeholder="Email Address" required>
         <input type="tel" name="phone" placeholder="Phone Number" required>
@@ -135,6 +171,7 @@ label {
         <textarea name="special_requests" placeholder="Special Requests (Optional)"></textarea>
         <button type="submit" class="btn-submit">Submit Booking</button>
     </form>
+
     <div class="login-section">
         Already booked? <a href="login.php">Login here to view or edit your booking</a>
     </div>
